@@ -35,7 +35,9 @@ function onGalleryItemClick(event) {
 }
 
 function openImage() {
-     const originalSrc = event.target.dataset.source;
+    const image = document.querySelector(".gallery__image");
+    const originalSrc = image.dataset.source;
+    
     const instance = basicLightbox.create(`
     <img src="${originalSrc}" width="800" height="600">
 `)
