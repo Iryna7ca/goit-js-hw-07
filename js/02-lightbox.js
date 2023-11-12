@@ -31,6 +31,11 @@ function onGalleryItemClick(event) {
     if (!event.target.classList.contains("gallery__image")) {
         return;
     }
-     var lightbox = new SimpleLightbox('.gallery a', { /* options */ });
- 
+     
+    lightbox.open;
 }
+
+const lightbox = new SimpleLightbox('.gallery a', { 
+        captionsData: "alt",
+        captionDelay: 250,
+    });
