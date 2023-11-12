@@ -30,17 +30,15 @@ function onGalleryItemClick(event) {
     if (!event.target.classList.contains("gallery__image")) {
         return;
     }
-     openImage();
- 
-}
-
-function openImage() {
-    const image = document.querySelector(".gallery__image");
-    const originalSrc = image.dataset.source;
-    
-    const instance = basicLightbox.create(`
+    console.log(event.target.dataset.source);
+    const originalSrc = event.target.dataset.source;
+     const instance = basicLightbox.create(`
     <img src="${originalSrc}" width="800" height="600">
 `)
 
-    instance.show()
- }
+    instance.show();
+      
+ 
+}
+
+ 
